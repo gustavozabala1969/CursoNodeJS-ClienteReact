@@ -15,6 +15,7 @@ function RegistrationForm(props) {
     firstName: '',
     lastName: '',
     email: '',
+    telefono: '',
     confirmPassword: '',
     successMessage: null,
   });
@@ -42,6 +43,7 @@ function RegistrationForm(props) {
         lastName: state.lastName,
         firstName: state.firstName,
         email: state.email,
+        telefono: state.telefono,
       };
       axios
         .post(`${API_BASE_URL}/auth/register`, payload)
@@ -144,6 +146,18 @@ function RegistrationForm(props) {
             aria-describedby="usernameHelp"
             placeholder="Apellido"
             value={state.lastName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group text-left">
+          <label htmlFor="exampleInputNombre1">Telefono</label>
+          <input
+            type="text"
+            className="form-control"
+            id="telefono"
+            aria-describedby="usernameHelp"
+            placeholder="Telefono"
+            value={state.telefono}
             onChange={handleChange}
           />
         </div>

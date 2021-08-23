@@ -41,6 +41,7 @@ const Home = () => {
               <th scope="col">Nombre</th>
               <th scope="col">Apellido</th>
               <th scope="col">Email</th>
+              <th scope="col">Telefono</th>
             </tr>
           </thead>
 
@@ -53,6 +54,7 @@ const Home = () => {
                   <td data-label="Nombre">{user.firstName || '------'}</td>
                   <td data-label="Apellido">{user.lastName || '------'}</td>
                   <td data-label="Email">{user.email || '------'}</td>
+                  <td data-label="Telefono">{user.telefono || '------'}</td>
                 </tr>
               ))}
           </tbody>
