@@ -43,7 +43,7 @@ function RegistrationForm(props) {
         lastName: state.lastName,
         firstName: state.firstName,
         email: state.email,
-        telefono: state.telefono,
+        telefono: state.telefono
       };
       axios
         .post(`${API_BASE_URL}/auth/register`, payload)
